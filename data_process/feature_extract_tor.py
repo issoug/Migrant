@@ -27,7 +27,7 @@ def pcap_to_sequence(pcap_path, seq_len=SEQ_LEN):
         cap = pyshark.FileCapture(
             pcap_path,
             display_filter='tls and (tls.record.content_type == 23 or tls.record.opaque_type == 23) and !tcp.analysis.retransmission',
-            tshark_path=r"D:\APP\Wireshark\tshark.exe"
+            tshark_path=r"D:\Wireshark\tshark.exe"
         )
         for pkt in cap:
             if int(pkt.tcp.srcport) == CLIENT_PORT:

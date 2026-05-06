@@ -144,20 +144,7 @@ def knn_monitor(net, device, memory_data_loader, test_data_loader, num_classes, 
 
 
 def knn_predict(feature, feature_bank, feature_labels, classes, knn_k, knn_t):
-    """
-    Predict labels using k-Nearest Neighbors (kNN) with cosine similarity.
 
-    Parameters:
-    feature (Tensor): Feature tensor.
-    feature_bank (Tensor): Feature bank tensor.
-    feature_labels (Tensor): Labels corresponding to the feature bank.
-    classes (int): Number of classes.
-    knn_k (int): Number of nearest neighbors to use.
-    knn_t (float): Temperature parameter for scaling.
-
-    Returns:
-    Tensor: Predicted labels.
-    """
     feature_labels = feature_labels.long()
 
     sim_matrix = torch.mm(feature, feature_bank)

@@ -28,7 +28,7 @@ cudnn.benchmark = False
 cudnn.deterministic = True
 
 # Config
-parser = argparse.ArgumentParser(description="WFlib")
+parser = argparse.ArgumentParser(description="Migrant")
 parser.add_argument("--checkpoints", type=str, default="../checkpoints/", help="Location of model checkpoints")
 parser.add_argument("--dataset", type=str, required=True, default="CW", help="Dataset name")
 parser.add_argument("--device", type=str, default="cpu", help="Device, options=[cpu, cuda, cuda:x]")

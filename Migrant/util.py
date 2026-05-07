@@ -78,7 +78,6 @@ def process_TW(packet_length, time, win):
     return np.vstack([starts, ends, up, dn])
 
 def measurement(y_true, y_pred, eval_metrics):
-    # eval_metrics = eval_metrics.split(" ")
     results = {}
     for eval_metric in eval_metrics:
         if eval_metric == "Accuracy":
@@ -95,21 +94,6 @@ def measurement(y_true, y_pred, eval_metrics):
 
 
 def knn_monitor(net, device, memory_data_loader, test_data_loader, num_classes, k=200, t=0.1):
-    """
-    Perform k-Nearest Neighbors (kNN) monitoring.
-
-    Parameters:
-    net (nn.Module): The neural network model.
-    device (torch.device): The device to run the computations on.
-    memory_data_loader (DataLoader): DataLoader for the memory bank.
-    test_data_loader (DataLoader): DataLoader for the test data.
-    num_classes (int): Number of classes.
-    k (int): Number of nearest neighbors to use.
-    t (float): Temperature parameter for scaling.
-
-    Returns:
-    tuple: True labels and predicted labels.
-    """
     net.eval()
     total_num = 0
     feature_bank, feature_labels = [], []

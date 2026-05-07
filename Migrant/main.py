@@ -26,7 +26,7 @@ cudnn.benchmark = False
 cudnn.deterministic = True
 
 # Argument parser for command-line options, arguments, and sub-commands
-parser = argparse.ArgumentParser(description="WFlib")
+parser = argparse.ArgumentParser(description="Migrant")
 parser.add_argument("--dataset", type=str, required=True, default="CW", help="Dataset name")
 parser.add_argument("--device", type=str, default="cpu", help="Device, options=[cpu, cuda, cuda:x]")
 parser.add_argument("--model", type=str, required=True, default="TF", help="Model name")

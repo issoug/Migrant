@@ -11,7 +11,7 @@ random.seed(fix_seed)
 np.random.seed(fix_seed)
 
 # Set up argument parser to get dataset name from command line arguments
-parser = argparse.ArgumentParser(description="WFlib")
+parser = argparse.ArgumentParser(description="Migrant")
 parser.add_argument("--use_stratify", type=str, default="True", help="Whether to use stratify")
 
 # Parse arguments

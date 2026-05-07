@@ -8,8 +8,8 @@ fix_seed = 2026
 random.seed(fix_seed)
 np.random.seed(fix_seed)
 
-parser = argparse.ArgumentParser(description="WFlib")
-parser.add_argument("--dataset", type=str, default="N15_our", help="Dataset name")
+parser = argparse.ArgumentParser(description="Migrant")
+parser.add_argument("--dataset", type=str, default="N15", help="Dataset name")
 args = parser.parse_args()
 
 in_path = os.path.join("../npz_dataset", f"{args.dataset}")

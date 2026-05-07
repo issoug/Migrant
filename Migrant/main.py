@@ -27,16 +27,16 @@ cudnn.deterministic = True
 
 # Argument parser for command-line options, arguments, and sub-commands
 parser = argparse.ArgumentParser(description="Migrant")
-parser.add_argument("--dataset", type=str, required=True, default="CW", help="Dataset name")
+parser.add_argument("--dataset", type=str, required=True, default="N15", help="Dataset name")
 parser.add_argument("--device", type=str, default="cpu", help="Device, options=[cpu, cuda, cuda:x]")
-parser.add_argument("--model", type=str, required=True, default="TF", help="Model name")
+parser.add_argument("--model", type=str, required=True, default="Migrant", help="Model name")
 parser.add_argument("--seq_len", type=int, default=5000, help="Input sequence length")
 parser.add_argument('--window', type=str, default='1/1800', help="Window size")
 parser.add_argument("--ratio", type=int, default=100, help="loaded ratio")
 # Optimization parameters
 parser.add_argument("--train_epochs", type=int, default=50, help="Train epochs")
 parser.add_argument("--batch_size", type=int, default=256, help="Batch size of train input data")
-parser.add_argument("--learning_rate", type=float, default=2e-3, help="Optimizer learning rate")
+parser.add_argument("--learning_rate", type=float, default=1e-4, help="Optimizer learning rate")
 parser.add_argument("--optimizer", type=str, default="Adam", help="Optimizer")
 
 # Output parameters
